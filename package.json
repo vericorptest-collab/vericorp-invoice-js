@@ -1,0 +1,38 @@
+{
+  "name": "@vericorp/invoice-extract",
+  "version": "1.0.0",
+  "description": "Official TypeScript SDK for the VeriCorp Invoice Extract API — extract structured data from European invoices using AI",
+  "keywords": ["vericorp", "invoice", "ocr", "ai", "extract", "europe", "vat", "iban", "pdf"],
+  "author": "VeriCorp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vericorptest-collab/vericorp-invoice-js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
